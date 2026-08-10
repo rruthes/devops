@@ -23,15 +23,15 @@ obter ingredientes do bolo:
       - build/
 
 verificar lista de ingredientes:
-stage: verificar_ingredientes
-script:
+  stage: verificar_ingredientes
+  script:
 
-- NOME_ARQ=bolo.txt
-- test -f build/$NOME_ARQ
-- cd build
-- grep "farinha de trigo" $NOME_ARQ
-- grep "açúcar" $NOME_ARQ
-- grep "manteiga" $NOME_ARQ
-- grep "ovos" $NOME_ARQ
-- grep "leite" $NOME_ARQ
-- grep "fermento" $NOME_ARQ 
+    - NOME_ARQ=bolo.txt
+    - test -f build/$NOME_ARQ
+    - cd build
+    - grep "farinha de trigo" $NOME_ARQ
+    - grep "açúcar" $NOME_ARQ
+    - grep "manteiga" $NOME_ARQ
+    - grep "ovos" $NOME_ARQ
+    - grep "leite" $NOME_ARQ
+    - grep "fermento" $NOME_ARQ 
