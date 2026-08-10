@@ -1,7 +1,12 @@
 ---
 
+stages: 
+  - obter_ingredientes #executa em ordem
+  - verificar_ingredientes
+
 obter ingredientes do bolo:
 
+stage: obter_ingredientes
 script:
 
 - mkdir build
@@ -15,6 +20,7 @@ script:
 
 
 verificar lista de ingredientes:
+stage: verificar_ingredientes
 script:
 
 - NOME_ARQ=bolo.txt
