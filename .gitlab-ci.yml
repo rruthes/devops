@@ -6,18 +6,21 @@ stages:
 
 obter ingredientes do bolo:
 
-stage: obter_ingredientes
-script:
+  stage: obter_ingredientes
+  script:
 
-- mkdir build
-- cd build
-- touch bolo.txt 
-- echo "2 xícaras de açúcar" > bolo.txt
-- echo "2 colheres de manteiga" > bolo.txt
-- echo "3 ovos" > bolo.txt
-- echo "1 xícara de leite" > bolo.txt
-- echo "1 colher de sopa de fermento" > bolo.txt
+    - mkdir build
+    - cd build
+    - touch bolo.txt 
+    - echo "2 xícaras de açúcar" > bolo.txt
+    - echo "2 colheres de manteiga" > bolo.txt
+    - echo "3 ovos" > bolo.txt
+    - echo "1 xícara de leite" > bolo.txt
+    - echo "1 colher de sopa de fermento" > bolo.txt
 
+  artifacts: 
+    paths:
+      - build/
 
 verificar lista de ingredientes:
 stage: verificar_ingredientes
